@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Movie" content="">
+        <title>Movie App</title>
+        <!--css-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/css.css">
+
+    </head>
+    <body class="bg-dark m-0 p-0 ">
+        <div class="side-nav ">
+            <div id="bar" class="side-nav-inner bg-dark py-5 ">
+                <i class="fa-solid fa-right-from-bracket nav-link py-5 d-flex justify-content-end fs-3 pe-3"></i>
+                <ul>
+                    <li>
+                        <a   onclick="getMovies('movie/now_playing')" class="barText fs-4  text-decoration-none nav-link py-1  px-5" href="#">Now playing</a>
+                    </li>
+                    <li>
+                        <a onclick="getMovies('movie/popular')" class="barText fs-4  text-decoration-none nav-link py-1  px-5" href="#">Popular</a>
+                    </li>
+                    <li>
+                        <a onclick="getMovies('movie/top_rated')" class="barText fs-4  text-decoration-none nav-link py-1  px-5" href="#">Top Rated</a>
+                    </li>
+                    <li>
+                        <a onclick="getMovies('trending/movie/day')" class="barText fs-4  text-decoration-none nav-link py-1  px-5" href="#">Trending</a>
+                    </li>
+                    <li>
+                        <a onclick="getMovies('movie/upcoming')" class="barText fs-4  text-decoration-none nav-link py-1  px-5" href="#">Upcoming</a>
+                    </li>
+                    <li>
+                        <a class="barText fs-4  text-decoration-none nav-link py-1  px-5" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+           <i id="btnOpen" class="fa-solid fa-bars text-white fs-5 align-self-center ps-4"><span class="text-white fs-5 p-2">Open</span></i>
+               
+          
+        </div>
+        <section id="searhSection" class=" py-4">
+            <input onkeyup="getSearchMovies(this.value)" id="search" type="search" placeholder="Search" class="form-control w-50 mx-auto bg-transparent rounded-pill text-white shadow-none border-white px-3">
+               <!--<div id="searchOutput" class="row  gy-4  w-75 mx-auto ">
+                </div>--> 
+        </section>
+        <section id="rowHome" class="row m-5 gy-4  w-75 mx-auto ">
+            
+           
+        </section>
+        <section  id="contact" class="">
+            <div  class="contact min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="container w-75 text-center">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <input id="nameInput"  type="text" class="form-control" placeholder="Enter Your Name" required>
+                           
+                        </div>
+                        <div  class="col-md-6">
+                         
+                            <input id="emailInput"  type="email" class="form-control  " placeholder="Enter Your Email" >
+                            <span Class="error text-danger" > pls enter valid email</span>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <input id="phoneInput"  type="text" class="form-control " placeholder="Enter Your Phone">
+                            <span Class="error2 text-danger" > pls enter Egyption number</span>
+                           
+                        </div>
+                        <div class="col-md-6">
+                            <input id="ageInput"  type="number" class="form-control " placeholder="Enter Your Age" required>
+                          
+                        </div>
+                        <div class="col-md-6">
+                            <input  id="passwordInput"  type="password" class="form-control " placeholder="Enter Your Password" required>
+                            <span Class="error3 text-danger" > pls enter strong password</span>
+                        </div>
+                        <div class="col-md-6">
+                            <input  id="repasswordInput"  type="password" class="form-control " placeholder="Repassword" required>
+                            <span Class="error4 text-danger" > Repassword incorrect</span>
+                        </div>
+                    </div>
+                    <button onclick="sumbitInput()" id="submitBtn"  class=" btn-dark rounded-pill py-2 px-5 mt-3 border border-2 border-primary">Submit</button>
+                </div>
+              </div>
+
+        </section>
+        
+       <div id="loading" class="justify-content-center align-items-center">
+        <div class="lds-facebook"><div></div><div></div><div></div>
+
+       </div>
+      
+        
+
+
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/main.js" ></script>
+    </body>
+</html>
